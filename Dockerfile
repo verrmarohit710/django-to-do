@@ -1,7 +1,8 @@
 FROM python:3
-RUN pip install django
+RUN pip install django==4.1.1
 
 COPY . .
+
 RUN python manage.py migrate
 
 EXPOSE 8000
